@@ -3,8 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/05_development/MyGPA/app/src/main/res/layout/activity_all_courses.xml" value="0.14492753623188406" />
         <entry key="..\:/05_development/MyGPA/app/src/main/res/layout/activity_calculate_info.xml" value="0.16666666666666666" />
-        <entry key="..\:/05_development/MyGPA/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/05_development/MyGPA/app/src/main/res/layout/activity_dean_list.xml" value="0.1" />
+        <entry key="..\:/05_development/MyGPA/app/src/main/res/layout/activity_insert_grade.xml" value="0.16666666666666666" />
+        <entry key="..\:/05_development/MyGPA/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/05_development/MyGPA/app/src/main/res/layout/courses_list.xml" value="0.1" />
         <entry key="..\:/05_development/MyGPA/app/src/main/res/layout/list_item_calculate_info.xml" value="0.1" />
         <entry key="..\:/05_development/MyGPA/app/src/main/res/layout/list_oc_calculate_info.xml" value="0.2" />
       </map>

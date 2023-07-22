@@ -35,18 +35,24 @@ public class CalculateInfo extends AppCompatActivity {
         scoresList.add("65 - 69");
         scoresList.add("60 - 64");
         scoresList.add("55 - 59");
+        scoresList.add("50 - 54");
+        scoresList.add("47 - 49");
+        scoresList.add("44 - 46");
+        scoresList.add("40 - 43");
+        scoresList.add("30 - 39");
+        scoresList.add("0 - 29");
 
-        ArrayAdapter<String> adapter = new ArrayAdapter(this, R.layout.list_item_calculate_info, R.id.description_text_view, scoresList) {
+        ArrayAdapter<String> adapter = new ArrayAdapter(this, R.layout.list_items, R.id.text_view2, scoresList) {
             @NonNull
             @Override
             public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
                 if (convertView == null) {
-                    convertView = getLayoutInflater().inflate(R.layout.list_item_calculate_info, parent, false);
+                    convertView = getLayoutInflater().inflate(R.layout.list_items, parent, false);
                 }
 
                 ImageView imageView = convertView.findViewById(R.id.image_view);
-                TextView descriptionTextView = convertView.findViewById(R.id.description_text_view);
-                TextView scoreTextView = convertView.findViewById(R.id.score_text_view);
+                TextView scoreTextView = convertView.findViewById(R.id.text_view1);
+                TextView descriptionTextView = convertView.findViewById(R.id.text_view2);
 
                 String scoreRange = scoresList.get(position);
                 ScoreDescription scoreDescription = getScoreDescription(scoreRange);
@@ -75,8 +81,20 @@ public class CalculateInfo extends AppCompatActivity {
             return new ScoreDescription("Satisfactory Pass", R.drawable.b);
         } else if (scoreRange.equals("60 - 64")) {
             return new ScoreDescription("Fail (Core Courses); Pass (Elective Courses)", R.drawable.bminus);
-        } else {
+        } else if (scoreRange.equals("55 - 59")) {
             return new ScoreDescription("Fail (Core Courses); Pass (Elective Courses)", R.drawable.cplus);
+        } else if (scoreRange.equals("50 - 54")) {
+            return new ScoreDescription("Fail (Core Courses); Pass (Elective Courses)", R.drawable.c);
+        } else if (scoreRange.equals("47 - 49")) {
+            return new ScoreDescription("Fail", R.drawable.cminus);
+        } else if (scoreRange.equals("44 - 46")) {
+            return new ScoreDescription("Fail", R.drawable.dplus);
+        } else if (scoreRange.equals("40 - 43")) {
+            return new ScoreDescription("Fail", R.drawable.d);
+        } else if (scoreRange.equals("30 - 39")) {
+            return new ScoreDescription("Fail", R.drawable.e);
+        } else {
+            return new ScoreDescription("Fail", R.drawable.f);
         }
     }
 
@@ -92,7 +110,6 @@ public class CalculateInfo extends AppCompatActivity {
         public String getDescription() {
             return description;
         }
-
         public int getImageResourceId() {
             return imageResourceId;
         }
